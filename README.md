@@ -6,7 +6,7 @@ Thank you for taking the time to interview with Clever. This coding challenge is
 ### Requirements
 - Create a small web app to display photos and details about the photos.
 - For the back end, you're open to use whatever framework & language you feel most comfortable with.
-- For the front end, although we'd like to see a small react app that interfaces with an API from the backend, if this ends up taking too much time, We are open to other options.
+- For the front end, although we'd like to see a small react app that interfaces with an API from the backend, if this ends up taking too much time, we are open to other options.
 - However, please use either `npm` or `yarn` for any front end package management.
 
 #### Product requirements
