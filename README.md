@@ -23,7 +23,7 @@ Thank you for taking the time to interview with Clever. This coding challenge is
 - There is also a logo and an icon provided (SVGs) included in this repo.
 
 ### Final Thoughts
-- You can fork this repo and commit your code there. Once done, please add the following users as members so we can review:
+- You can fork this repo and commit your code there. Please open a PR from the fork _back_ to the main repo, and once done, please add the following users as members so we can review:
   - James Crain (@imjamescrain)
   - Jimmy Lien (@jlien)
   - Nick Clucas (@nickcluc)
