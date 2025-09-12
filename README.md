@@ -53,6 +53,7 @@ cd backend
 python -m venv venv
 source venv/bin/active
 pip install -r requirements.txt
+cd app
 fastapi dev main.py # or uvicorn app.main:app --reload
 ```
 
@@ -72,6 +73,8 @@ fastapi dev main.py # or uvicorn app.main:app --reload
 - FastAPI
 - SQLAlchemy
 - Pandas (CSV loading)
+- pyjwt
+- passlib
 - SQLite
 - React
 - Tailwindcss

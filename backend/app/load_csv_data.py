@@ -16,7 +16,7 @@ def load_photos_from_csv():
             print(f"Db already has {existing_count} photos. Skipping CSV load.")
             return
         
-        df = pd.read_csv('../photos.csv')
+        df = pd.read_csv('../../photos.csv')
         print(f"Found {len(df)} photos in CSV")
         print("cols: ", df.columns.to_list())
         print("\nFirst row: ")
@@ -30,12 +30,17 @@ def load_photos_from_csv():
                 height=int(row['height']),
                 url=row['url'],
                 photographer=row['photographer'],
+                photographer_url=row['photographer_url'],
                 photographer_id=int(row['photographer_id']),
                 avg_color=row['avg_color'],
                 src_original=row['src.original'],
+                src_large2x=row['src.large2x'],
                 src_large=row['src.large'],
                 src_medium=row['src.medium'],
                 src_small=row['src.small'],
+                src_portrait=row['src.portrait'],
+                src_landscape=row['src.landscape'],
+                src_tiny=row['src.tiny'],
                 alt=row['alt']
             )
             photos.append(photo)

@@ -28,9 +28,13 @@ class Photo(Base):
     photographer_id = Column(Integer)
     avg_color = Column(String)
     src_original = Column(Text)
+    src_large2x = Column(Text)
     src_large = Column(Text)
     src_medium = Column(Text)
     src_small = Column(Text)
+    src_portrait = Column(Text)
+    src_landscape = Column(Text)
+    src_tiny = Column(Text)
     alt = Column(Text)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
