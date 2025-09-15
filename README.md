@@ -57,16 +57,28 @@ cd app
 fastapi dev main.py # or uvicorn app.main:app --reload
 ```
 
-2. Database and sample photos are automatically created on first run
-3. Visit [Swagger page](http://localhost:8000/docs) for API docs
+2. Database and sample photos are automatically created on first run of the BE dev server
 
-### Frontend Setup
+3. Navigate to the frontend directory:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### First Time Usage
+
+1. **Create an account:** Use the [swagger page auth signup endpoint](http://localhost:8000/docs#/authentication/create_user_auth_signup_post)
+
+2. Use your credentials to login to the application FE
 
 ### Architecture
 
 - **Backend**: FastAPI + SQLAlchemy + SQLite
 - **Database**: SQLite with auto-generated tables & CSV data loading
-- **Frontend**: React + Tailwindcss
+- **Frontend**: React + React Router + Tailwindcss
+- **Authentication**: JWT tokens
 
 ### Tech Stack
 
@@ -77,4 +89,34 @@ fastapi dev main.py # or uvicorn app.main:app --reload
 - passlib
 - SQLite
 - React
+- React Router
 - Tailwindcss
+
+### Features Implemented
+
+- User registration (via swagger) and JWT authentication
+- Protected photo gallery (frontend routes and backend API endpoints require authentication)
+- All photo related API calls validate tokens server side
+- Like/unlike photos with database persistence
+- Responsive design
+- Image modal for full-size photo view
+- External linking to pexels profile
+- Auto-logout (expired tokens redirect users to login)
+
+### Improvements Outside Of Scope
+
+**_For a production application or to improve this project the following would / could be implemented:_**
+
+- Managed authentication service (AWS Cognito, Auth0) instead of custom JWT implementation
+- Environment variables for JWT secret key (hardcoded for demo)
+- Form validation / sanitization
+- Unit testing / e2e and integration testing
+- HTTPS
+- Rate limiting on endpoints
+- PostgreSQL or some production level db
+- CI/CD pipeline with automated testing
+- Error logging and monitoring (Cloudwatch / Sentry ect.)
+- Email verification for registration
+- Password reset functionality
+- Better form validation / schemas ect.
+- Probably break components down more granularly, more reusable components, layouts, ect.

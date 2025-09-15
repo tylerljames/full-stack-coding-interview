@@ -32,7 +32,7 @@ def get_photos(
             width=photo.width,
             height=photo.height,
             photographer=photo.photographer,
-            photographer_url=photo.url,
+            photographer_url=photo.photographer_url,
             photographer_id=photo.photographer_id,
             avg_color=photo.avg_color,
             src_original=photo.src_original,

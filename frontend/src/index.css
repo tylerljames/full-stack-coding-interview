@@ -1,1 +1,10 @@
 @import 'tailwindcss';
+
+.star-liked {
+  filter: invert(58%) sepia(69%) saturate(959%) hue-rotate(8deg)
+    brightness(108%) contrast(93%);
+}
+
+.star-unliked {
+  filter: invert(85%) brightness(0.8);
+}
